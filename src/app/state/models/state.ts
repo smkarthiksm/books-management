@@ -1,5 +1,5 @@
 export interface AppState {
-  books: BooksState;
+  booksState: BooksState;
 }
 
 export interface BooksState {

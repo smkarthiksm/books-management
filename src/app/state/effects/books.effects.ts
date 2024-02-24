@@ -8,11 +8,8 @@ import { BooksActions } from '../actions/books.action';
 export class BooksEffects {
   constructor(private actions$: Actions, private apiService: ApiService) {}
 
-  loadMovies$ = createEffect(() =>
+  loadBooks$ = createEffect(() =>
     this.actions$.pipe(
-      (actions) => {
-        return actions;
-      },
       ofType(BooksActions.getBooksApiCall),
       exhaustMap(() =>
         this.apiService.getBooks().pipe(

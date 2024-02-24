@@ -1,1 +1,6 @@
 <p>books-listing works!</p>
+<p-progressSpinner *ngIf="loading"></p-progressSpinner>
+<div *ngFor="let book of books">
+    Author: {{book.author.first_name}} {{book.author.last_name}}
+    Genres: {{book.genres}}
+</div>
